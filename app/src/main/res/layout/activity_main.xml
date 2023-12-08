@@ -14,8 +14,8 @@
         android:paddingTop="50dp"
         android:text="@string/entrance"
         android:textColor="@color/white"
-        android:textSize="20sp"
-        android:textStyle="normal"
+        android:textSize="22sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -40,24 +40,24 @@
         android:layout_marginTop="25dp"
         android:text="@string/registration1"
         android:textColor="@color/white"
-        android:textSize="12sp"
+        android:textSize="18sp"
         android:textStyle="normal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/Welcome" />
 
-    <TextView
-        android:id="@+id/registration2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/registransion2"
-        android:textColor="@color/white"
-        android:textSize="12sp"
-        android:textStyle="normal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/registration"
-        tools:ignore="SmallSp" />
+<!--    <TextView-->
+<!--        android:id="@+id/registration2"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="@string/registransion2"-->
+<!--        android:textColor="@color/white"-->
+<!--        android:textSize="12sp"-->
+<!--        android:textStyle="normal"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/registration"-->
+<!--        tools:ignore="SmallSp" />-->
 
     <EditText
         android:id="@+id/email"
@@ -120,7 +120,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="80dp"
-        android:text="@string/clicPAssworld"
+        android:text="@string/clickPAssworld"
         android:textColor="@color/orange"
         android:textSize="10sp"
         android:textStyle="normal"

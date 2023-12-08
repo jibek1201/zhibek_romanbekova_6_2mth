@@ -1,5 +1,6 @@
 package com.example.zhibekromanbekova_hw6_2m;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.text.Editable;
@@ -14,14 +15,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
 public class MainActivity extends AppCompatActivity {
-    private TextView Entrance;
-    private TextView Welcome;
-    private TextView Registration;
-    private TextView Registration2;
-    private TextView YourPassworld;
-    private TextView ClicPassworld;
-    private EditText Email;
-    private EditText password;
+    private TextView Entrance, Welcome, Registration, Registration2, YourPassworld, ClicPassworld;
+    private EditText Email, password;
     private Button Come;
 
     @Override
@@ -31,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         Entrance = findViewById(R.id.Entrance);
         Welcome = findViewById(R.id.Welcome);
         Registration = findViewById(R.id.registration);
-        Registration2 = findViewById(R.id.registration2);
+        Registration2 = findViewById(R.id.registration);
         YourPassworld = findViewById(R.id.yourPassworld);
         ClicPassworld = findViewById(R.id.clicPassworld);
         Email = findViewById(R.id.email);
@@ -80,27 +75,15 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-        Come.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (Email.getText().toString().equals("admin") &&
-                        password.getText().toString().equals("admin")) {
-                    Entrance.setVisibility(View.GONE);
-                    Registration.setVisibility(View.GONE);
-                    Registration2.setVisibility(View.GONE);
-                    YourPassworld.setVisibility(View.GONE);
-                    ClicPassworld.setVisibility(View.GONE);
-                    Email.setVisibility(View.GONE);
-                    password.setVisibility(View.GONE);
-                    Come.setVisibility(View.GONE);
-                    Toast.makeText(MainActivity.this,
-                            "Вы успешно зарегистрировались",
-                            Toast.LENGTH_SHORT).show();
-                } else {
-                    Toast.makeText(MainActivity.this,
-                            "Не правильный логин или пароль"
-                            , Toast.LENGTH_SHORT).show();
-                }
+        Come.setOnClickListener(v -> {
+            if (Email.getText().toString().equals("admin") &&
+                    password.getText().toString().equals("admin")) {
+                Intent intent = new Intent(this, SecondActivity.class);
+                startActivity(intent);
+            } else {
+                Toast.makeText(MainActivity.this,
+                        "Wrong login or password"
+                        , Toast.LENGTH_SHORT).show();
             }
         });
     }
